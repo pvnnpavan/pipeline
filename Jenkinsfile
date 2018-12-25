@@ -12,5 +12,5 @@ node {
    }
    stage('Deploy') {
       sh 'cp target/calcwebapp.war /opt/tomcat/webapps/'
-   
+   }
 }
