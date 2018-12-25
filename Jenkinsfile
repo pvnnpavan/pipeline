@@ -13,4 +13,9 @@ node {
    stage('Deploy') {
       sh 'cp target/calcwebapp.war /opt/tomcat/webapps/'
    }
+   stage('Email Notification'){
+      mail bcc: '', body: '''Pipeline job completed
+      Thanks
+      Pavan''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'pvnnpavan@live.in'
+}
 }
